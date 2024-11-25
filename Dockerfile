@@ -42,7 +42,8 @@ FROM ubuntu:latest
 
 # install dependencies
 RUN apt-get update && \
-    apt-get install -y libasound2-dev pkg-config libpulse-dev libvorbisidec-dev libvorbis-dev libopus-dev libflac-dev libsoxr-dev alsa-utils libavahi-client-dev avahi-daemon libexpat1-dev
+    apt-get install -y libasound2-dev pkg-config libpulse-dev libvorbisidec-dev libvorbis-dev libopus-dev libflac-dev libsoxr-dev alsa-utils libavahi-client-dev avahi-daemon libexpat1-dev && \
+    apt-get upgrade -y
 
 # copy binaries from the build stages
 COPY --from=snapserver /snapcast/bin/snapserver /usr/local/bin/
