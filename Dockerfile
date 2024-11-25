@@ -13,7 +13,7 @@ RUN git clone --branch master https://github.com/badaix/snapcast.git && \
     cd build && \
     cmake .. -DBOOST_ROOT=/usr/include/boost && \
     cmake .. -DBUILD_CLIENT=OFF -DBUILD_SERVER=ON -DBUILD_WITH_PULSE=OFF && \
-    cmake --build . --parallel 12
+    cmake --build .
 
 
 
