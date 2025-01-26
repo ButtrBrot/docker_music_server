@@ -54,7 +54,7 @@ COPY --from=librespot /root/.cargo/bin/librespot /root/.cargo/bin/librespot
 COPY snapserver.conf /etc/snapserver.conf
 
 # publish ports
-EXPOSE 1704 1705 1780 5353 43945
+EXPOSE 1704 1705 1780 5353 34567
 
 # start snapserver
 ENTRYPOINT [ "snapserver" ]
