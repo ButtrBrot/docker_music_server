@@ -2,7 +2,7 @@ FROM ubuntu:latest AS snapserver
 
 # install dependencies
 RUN apt-get update && \
-    apt-get install -y build-essential cmake libboost-all-dev git && \
+    apt-get install -y build-essential cmake libboost-all-dev git libssl-dev && \
     apt-get install -y libasound2-dev libpulse-dev libvorbisidec-dev libvorbis-dev libopus-dev libflac-dev libsoxr-dev alsa-utils libavahi-client-dev avahi-daemon libexpat1-dev && \
     apt-get upgrade -y
 
